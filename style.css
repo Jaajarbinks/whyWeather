@@ -24,7 +24,13 @@ body {
 .recent-search{
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: cover;
+}
+
+p {
+    font-size: 30px;
+    margin: 10px;
+    transform: translateX(5%);
 }
 
 .city1 {
@@ -33,30 +39,99 @@ body {
 }
 
 .showMe {
-    align-items: flex-start;
-    justify-content: flex-start;
     float: right;
+    transform: translateX(135%) translateY(-100%);
+    position: fixed;
 }
 
-form {
-    height: 200px;
+p3 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
 }
 
 .recentSearches {
     height: 80px;
-    text-align: left;
-    
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-35%) translateY(38%);
+}
+
+form {
+    height: 200px;
+
+}
+
+#hey {
+    height: 30px;
+    width: 220px;
+    border: 1px solid;
+    border-radius: 20px 20px;
+    margin: 7px;
 }
 
 #search1 {
     height: 49px;
-    width: 230px;
+    width: 220px;
+    border: 3px solid;
+    margin: 7px;
+    border-radius: 10px 5px;
 }
 
 #search2 {
     height: 50px;
-    width: 310px;
+    width: 220px;
     border-radius: 10px 5px;
     border: 3px solid;
     margin: 7px;
+}
+
+.forcast {
+    background: transparent;
+    
+    float: right;
+    position: fixed;
+    transform: translateX(210%) translateY(-15%);
+    
+}
+
+.ok {
+    width: 38px;   
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+}
+
+.ok1 {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    transform: translate(130%) translateY(-24%);
+}
+
+.ok2 {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    transform: translate(150%) translateY(-33%);
+}
+
+.ok3 {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    transform: translate(170%) translateY(-50%);
+}
+
+.ok4 {
+    display: flex;
+    margin: 3px;
+    flex-direction: column;
+    transform: translate(200%) translateY(-105%);
+}
+
+p4 {
+    flex-direction: column;
 }
