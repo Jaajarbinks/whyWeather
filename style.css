@@ -79,6 +79,8 @@ form {
 }
 
 #hey {
+    background: transparent;
+    text-align: center;
     height: 30px;
     width: 220px;
     border: 1px solid;
@@ -86,12 +88,22 @@ form {
     margin: 7px;
 }
 
+#hey:hover {
+    background: rgb(138, 52, 12);
+}
+
 #search1 {
+    background: transparent;
     height: 49px;
     width: 220px;
     border: 3px solid;
     margin: 7px;
     border-radius: 10px 5px;
+}
+
+#search1:hover {
+    background: rgb(212, 168, 20);
+    transition: all 0.5s ease-in-out;
 }
 
 #search2 {
@@ -102,7 +114,7 @@ form {
     margin: 7px;
 }
 
-.forcast {
+#forcast {
     position: absolute;
     /* top: 0px; */
     right: 200px;
@@ -112,6 +124,15 @@ form {
     flex-direction: column;
     flex-wrap: wrap;
     background: transparent;   
+}
+.card {
+    position: absolute;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: transparent;
 }
 
 p4 {
