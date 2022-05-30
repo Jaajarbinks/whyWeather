@@ -19,10 +19,18 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
+.container {
+    position: relative;
 }
 
 .recent-search{
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: cover;
 }
@@ -39,9 +47,15 @@ p {
 }
 
 .showMe {
-    float: right;
-    transform: translateX(135%) translateY(-100%);
-    position: fixed;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 14px;
+    float: right; 
+    display: flex;   
+    flex-direction: column;
+    flex: auto;
+    flex-wrap: wrap;
 }
 
 p3 {
@@ -89,49 +103,17 @@ form {
 }
 
 .forcast {
-    background: transparent;
-    
+    position: absolute;
+    /* top: 0px; */
+    right: 200px;
     float: right;
-    position: fixed;
-    transform: translateX(210%) translateY(-15%);
-    
-}
-
-.ok {
-    width: 38px;   
     display: flex;
-    margin: 3px;
+    flex-wrap: wrap;
     flex-direction: column;
-}
-
-.ok1 {
-    display: flex;
-    margin: 3px;
-    flex-direction: column;
-    transform: translate(130%) translateY(-24%);
-}
-
-.ok2 {
-    display: flex;
-    margin: 3px;
-    flex-direction: column;
-    transform: translate(150%) translateY(-33%);
-}
-
-.ok3 {
-    display: flex;
-    margin: 3px;
-    flex-direction: column;
-    transform: translate(170%) translateY(-50%);
-}
-
-.ok4 {
-    display: flex;
-    margin: 3px;
-    flex-direction: column;
-    transform: translate(200%) translateY(-105%);
+    flex-wrap: wrap;
+    background: transparent;   
 }
 
 p4 {
-    flex-direction: column;
+    font-size: 19px;
 }
