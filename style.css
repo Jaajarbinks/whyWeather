@@ -1,76 +1,42 @@
+body {
+    display: flexbox;
+    flex-wrap: wrap;
+    float: none;
+    background-image: url(https://globalnews.ca/wp-content/uploads/2022/02/lightning.jpg?quality=85&strip=all);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* need to make css for my page */
 header {
     height: 70px;
     text-align: center;
-    display: flex;
+    display: flexbox;
+    float: none;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     font-size: 45px;
 }
 
-p1 {
+#p1 {
+    font-size: 20px;
     text-align: center;
-    display: flex;
+    display: flexbox;
+    float: none;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-body {
-    background-image: url(https://globalnews.ca/wp-content/uploads/2022/02/lightning.jpg?quality=85&strip=all);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flexbox;
-    flex-wrap: wrap;
+p {
+    font-size: 25px;
 }
 
 .container {
-    position: relative;
-}
-
-.recent-search{
-    position: relative;
-    display: flex;
+    display: flexbox;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: cover;
-}
-
-p {
-    font-size: 30px;
-    margin: 10px;
-    transform: translateX(5%);
-}
-
-.city1 {
-    background: transparent;
-    color: darkmagenta;
-}
-
-.showMe {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    font-size: 14px;
-    float: right; 
-    display: flex;   
-    flex-direction: column;
-    flex: auto;
-    flex-wrap: wrap;
-}
-
-p3 {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-
-}
-
-.recentSearches {
-    height: 80px;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-35%) translateY(38%);
+    position: relative;
 }
 
 form {
@@ -89,7 +55,7 @@ form {
 }
 
 #hey:hover {
-    background: rgb(138, 52, 12);
+    background: rgba(189, 18, 18, 0.24);
 }
 
 #search1 {
@@ -102,11 +68,50 @@ form {
 }
 
 #search1:hover {
-    background: rgb(212, 168, 20);
+    background: rgba(255, 251, 28, 0.219);
     transition: all 0.5s ease-in-out;
 }
 
+.showMe {
+    position: absolute;
+    right: 200px;
+    top: 0px;
+    font-size: 14px;
+    /* float: right;  */
+    display: flex;   
+    flex-direction: column;
+    /* flex: auto; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p3 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.recentSearches {
+    /* background: white; */
+    display: flexbox;
+    flex-wrap: wrap;
+    text-align: left;
+    height: 30px;
+    margin: 3px;
+}
+
+.recent-search{
+    /* position: relative; */
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: cover;
+}
+
 #search2 {
+    background: transparent;
+    color: darkmagenta;
     height: 50px;
     width: 220px;
     border-radius: 10px 5px;
@@ -114,27 +119,26 @@ form {
     margin: 7px;
 }
 
-#forcast {
-    position: absolute;
-    /* top: 0px; */
-    right: 200px;
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background: transparent;   
-}
-.card {
-    position: absolute;
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background: transparent;
+#search2:hover {
+    background: rgba(73, 208, 212, 0.295);
 }
 
-p4 {
-    font-size: 19px;
+#forecast {
+    position: absolute;
+    float: right;
+    right: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: white;   
+}
+
+.table {
+    position: absolute;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: white;
 }

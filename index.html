@@ -8,49 +8,54 @@
     <title> Weather Or Not</title>
 </head>
 <body>
+  <div>
     <header>Weather Somewhere</header>
-    <p1 id="p1">current time here</p1>
+
+    <!--this is where i want my current time to appear-->
+    <p id="p1">time</p>
+  </div>
+    <!--this is for my textarea for the city that i want to show up-->
      <div class="container">
       <form>
         <p>City Search</p>
         <input type="text" id="hey" placeholder="" />
       </form>
       <button id="search1" type="submit">Search</button>
+
+      <!--section is for my current weather-->
       <section class="showMe">
+        <div class="showMe1">
         <h1 class="My searched city here">My searched city here</h1>
-        <img src="" alt="icon">
-        <p3 class="name1">name</p3>
+        <img src="" class ="icon" alt="">
+        <p3 class="name1">name:</p3>
         <p3 class="Temp">Temp:</p3>
         <p3 class="Wind">Wind:</p3>
         <p3 class="Humidity">Humidity:</p3>
         <p3 class="Pressure">Pressure:</p3>
+      </div>
       </section>  
   
      </div>
     <div class="recentSearches">
      <header1>Recent Search</header1>
     </div>
-      <div class="recent-search">
-        <button id="search2" type="submit" class="city1">city</button>
-        <button id="search2" type="submit1" class="city1">city1</button>
-        <button id="search2" type="submit" class="city1">city2</button>
-        <button id="search2" type="submit" class="city1">city3</button>
-        <button id="search2" type="submit" class="city1">city4</button>
-      <div id="forcast">
-        <div class="card">
-            <img src="" alt="weather.description"> 
-            <p4 class="Name">name</p4>
-            <p4 class="5 Day Forcast">5 Day Forcast</p4>
-            <p4 class="Temp">Temp: </p4>
-            <p4 class="Wind">Wind: </p4>
-            <p4 class="Humidity">Humidity: </p4>
-                   
-        
-          </div>
+    <!--creating buttons for my future forecast-->
+     <div class="recent-search">
+       <button id="search2" type="submit" class="city">city</button>
+       <button id="search2" type="submit1" class="city1">city1</button>
+       <button id="search2" type="submit" class="city2">city2</button>
+       <button id="search2" type="submit" class="city3">city3</button>
+       <button id="search2" type="submit" class="city4">city4</button>
+       
+       <!--class for the forecast cards will make in javascript-->
+       <div id="forecast" class="table"> 
+         
       </div>
+    </div>
       </div>
     
     
       <script src="script.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 </body>
 </html>

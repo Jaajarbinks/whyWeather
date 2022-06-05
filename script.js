@@ -1,62 +1,99 @@
-    var img = document.createElement("img");
+    // varibles for the api calls
+    var img = document.querySelector(".icon");
     var name1 = document.querySelector(".name1")
     var Temp = document.querySelector(".Temp");
     var Wind = document.querySelector(".Wind");
     var Humidity = document.querySelector(".Humidity");
     var Pressure = document.querySelector(".Pressure");
     var Name = document.querySelector(".Name");
+    var p1 = document.querySelector("#p1");
+    var APIKey = "0ae8e28782574a4e1da5362bb95aa91d";
+    var forecast = document.querySelector("#forecast");
+    var api = "https://api.openweathermap.org/data/2.5/onecall?lat={39.613319}&lon={-105.016647}&appid={0ae8e28782574a4e1da5362bb95aa91d"
 
-    document.write(Date());
+    setInterval(function() {
+        var timeDate = moment().format("MMM Do, YYYY" + " hh:mm:ss");
+        p1.innerText = ('Today is ' + timeDate);
+        }, 1000);
 
-    function fetchData() {
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=Littleton&appid=5648fe3c0f05db5519f2f0ac5691ffbe")
-    .then(response => {
-        // console.log(response);
-        if (!response.ok) {
-            throw Error("ERROR");
-        }
-        return response.json();
-    }) .then(data => {
-        console.log(data);
-        var icon = data["weather"][0]["icon"];
-        var name = data["name"]
-        var wind = data["wind"]["speed"]
-        var temp = data["main"]["temp"]
-        var pressure = data["main"]["pressure"]
-        var humidity = data["main"]["humidity"]
-        
-        img.innerHTML = icon;
-        name1.innerHTML = name;
-        Temp.innerHTML = temp;
-        Wind.innerHTML = wind;
-        Humidity.innerHTML = humidity;
-        Pressure.innerHTML = pressure;
+    
+// fetch weather api with forecast
+function fetchData() {
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=39.613319&lon=-105.016647&exclude=alerts&appid=0ae8e28782574a4e1da5362bb95aa91d`)
+    .then(response => {console.log(response); return response.json();}) 
+    .then(data => {this.renderData(data)});
+ }
 
-        
-        });
-     }
+// getting data from openweathermapapi
+function renderData(data) {
+    console.log(data);
+    var icon = data.current.weather[0].icon;
+    console.log(icon);
+    // for icon
+    `https://openweathermap.org/img/wn/${icon}.png`
+    var name = data["timezone"]
+    var wind = data["current"]["wind_speed"]
+    var temp = data["current"]["temp"]
+    var pressure = data["current"]["pressure"]
+    var humidity = data["current"]["humidity"]
+    img.src = `https://openweathermap.org/img/wn/${icon}.png`;
+    name1.innerHTML = name;
+    Temp.innerHTML = temp;
+    Wind.innerHTML = wind;
+    Humidity.innerHTML = humidity;
+    Pressure.innerHTML = pressure;
+}
 fetchData();
 
+// making card for forecast
+// select card div
+var table = document.getElementsByClassName("table")[0];
+console.log(table);
+
+// use for card time
+// moment.unix(result.daily[i].dt).format("l")
+
+// making card
+function createCard(string) {
+    var card = document.createElement("div");
+    card.className = "card";
+
+    var topNumber = document.createElement("div")
+    topNumber.innerText = string;  
+
+    card.append(topNumber);
+    return card;
+    
+    
+}
+// making card children
+    // var name = data["timezone"]
+    // var wind = data["current"]["wind_speed"]
+    // var temp = data["current"]["temp"]
+    // var pressure = data["current"]["pressure"]
+    // var humidity = data["current"]["humidity"]
+table.appendChild(createCard(Humidity));
+    table.appendChild(createCard(Wind));
+    table.appendChild(createCard(Temp));
+    table.appendChild(createCard(Pressure));
+
+
+
+
+// placing input in to local storage.
 var input = document.getElementById("#hey");
 var button = document.getElementById("#search1");
+var city = document.getElementsByClassName(".city");
 
-button.addEventListener("click", function(){
-    saveData();
-});
 
-var savedCity = [""];
-
-for (let i = 0; i < savedCity.length; i++) {
-    const element = savedCity[i];
-}
-    
+    // adding eventlistener for the button.
 var save_button = document.getElementById('hey')
- save_button.onclick = saveData;
-
-function saveData(){
-    console.log(savedCity);
-  var input1 = document.getElementById("hey");
-  savedCity.push(input1.value);
-  localStorage.setItem("cityName", savedCity);
-  var storedValue = localStorage.getItem("cityName");
-}
+ save_button.addEventListener("click", function(){
+   
+ });
+//  storage
+ search1.addEventListener("click", function(){
+     localStorage.setItem("hey", hey.value);     
+     console.log(localStorage);
+     JSON.parse(localStorage.getItem("hey"));
+     });
