@@ -28,7 +28,7 @@ function fetchData() {
 function renderData(data) {
     console.log(data);
     var icon = data.current.weather[0].icon;
-    console.log(icon);
+    // console.log(icon);
     // for icon
     `https://openweathermap.org/img/wn/${icon}.png`
     var name = data["timezone"]
@@ -47,35 +47,23 @@ fetchData();
 
 // making card for forecast
 // select card div
-var table = document.getElementsByClassName("table")[0];
-console.log(table);
+
 
 // use for card time
 // moment.unix(result.daily[i].dt).format("l")
 
 // making card
-function createCard(string) {
-    var card = document.createElement("div");
-    card.className = "card";
+var card = document.querySelector(".recent-search");
 
-    var topNumber = document.createElement("div")
-    topNumber.innerText = string;  
+// for (let i = 1; i < 6; i++) {
+    var {temp, wind_speed, humidity, feels_like} = result.daily[i];
+    var fivedayIcon = result.daily[i].weather[0].icon;
+    var name1 = result.daily[i].weather[0].description;
+    var wind1 = result.daily[i].wind_speed;
+    var temp1 = result.daily[i].temp.day;
+    var pressure1 = result.daily[i].pressure;
+    var humidity1 = result.daily[i].humidity;
 
-    card.append(topNumber);
-    return card;
-    
-    
-}
-// making card children
-    // var name = data["timezone"]
-    // var wind = data["current"]["wind_speed"]
-    // var temp = data["current"]["temp"]
-    // var pressure = data["current"]["pressure"]
-    // var humidity = data["current"]["humidity"]
-table.appendChild(createCard(Humidity));
-    table.appendChild(createCard(Wind));
-    table.appendChild(createCard(Temp));
-    table.appendChild(createCard(Pressure));
 
 
 
