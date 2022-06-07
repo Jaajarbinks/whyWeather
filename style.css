@@ -1,5 +1,5 @@
 body {
-    display: flexbox;
+    /* display: flex; */
     flex-wrap: wrap;
     float: none;
     background-image: url(https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/23613146140_6edfea579f_k.jpg?m0oNCnmjJAswk0CJrWZ.iW.ge6XbrfR1&itok=YBQjaq77);
@@ -35,7 +35,7 @@ p {
 }
 
 .container {
-    display: flexbox;
+    /* display: flex; */
     flex-wrap: wrap;
     position: relative;
 }
@@ -77,15 +77,14 @@ form {
 
 .showMe {
     background: rgba(92, 84, 84, 0.281);
-    
+    align-content: flex-start;
+    align-items: flex-end;
     position: absolute;
     right: 200px;
     top: 0px;
     font-size: 14px;
-    /* float: right;  */
     display: flex;   
     flex-direction: column;
-    /* flex: auto; */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -98,29 +97,45 @@ p3 {
 
 .recentSearches {
     /* background: white; */
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
     text-align: left;
     height: 30px;
     margin: 3px;
 }
 
-.recent-search{
-    /* position: relative; */
+#recent-search{
+   
     float: left;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: cover;
+    width: 100%;
     margin: 6px;
     padding: 3px;
+    justify-content: space-between;
 }
+
+/* five-day {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
 
 ul {
-    margin: 7px;
-    display: flexbox;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
 }
 
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+/* 
 #search2 {
     background: transparent;
     color: darkmagenta;
@@ -133,24 +148,4 @@ ul {
 
 #search2:hover {
     background: rgba(73, 208, 212, 0.295);
-}
-
-#forecast {
-    position: absolute;
-    float: right;
-    right: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background: white;   
-}
-
-.table {
-    position: absolute;
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background: white;
-}
+} */
