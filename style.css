@@ -104,15 +104,26 @@ p3 {
     margin: 3px;
 }
 
-#recent-search{
-   
-    float: left;
+.card-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+    background: rgba(7, 116, 34, 0.212); 
+    border: 2px solid;
+}
+
+.recent-search{   
+    /* float: left; */
+    display: flex;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     width: 100%;
     margin: 6px;
     padding: 3px;
     justify-content: space-between;
+    height: 200px;
+    border: 2px solid;
 }
 
 /* five-day {
