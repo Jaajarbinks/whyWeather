@@ -1,3 +1,9 @@
+body {
+    background-image: url(./Assets/Volcanic-Lightning.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 
 header {
     color: blue;
@@ -5,13 +11,13 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 60px;
+    height: 65px;
+    font-size: 30px;
 }
+
 p {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-end;
 }
