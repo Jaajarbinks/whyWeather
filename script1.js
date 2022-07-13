@@ -16,5 +16,11 @@ setInterval(function () {
     p.innerText = "Today is " + timeDate;
   }, 1000);
 
-  const main = document.createElement('main');
+  const div = document.createElement('div');
+  div.className = 'CitySearch';
+  const input = document.createElement('INPUT');
+  input.setAttribute('type', 'text');
+  div.appendChild(input);
+  document.body.append(div);
+  
   

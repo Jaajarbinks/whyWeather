@@ -9,6 +9,7 @@ header {
     color: blue;
     background: olivedrab;
     justify-content: center;
+    align-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
