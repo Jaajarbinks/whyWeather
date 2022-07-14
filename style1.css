@@ -22,3 +22,34 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+.CitySearch {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: green;
+    height: 80px;
+    width: 300px;
+}
+
+h1 {
+    display: flex;
+    /* font-size: 25px; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+
+}
+
+.searchBar {
+    width: 140px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar1 {
+    width: 148px;
+    margin: 5px;
+}
