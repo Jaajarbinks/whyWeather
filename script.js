@@ -21,9 +21,7 @@ setInterval(function () {
 }, 1000);
 
 // fetch weather api with forecast
-button.addEventListener("click", ()=>{
-   
-   
+button.addEventListener("click", ()=>{   
 let latCoord;
 let longCoord;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&exclude=alerts&units=imperial&appid=0ae8e28782574a4e1da5362bb95aa91d`)
