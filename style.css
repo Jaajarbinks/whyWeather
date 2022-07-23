@@ -1,13 +1,13 @@
-body {
-    /* display: flex; */
+body {    
     flex-wrap: wrap;
     float: none;
     background-image: url(https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/23613146140_6edfea579f_k.jpg?m0oNCnmjJAswk0CJrWZ.iW.ge6XbrfR1&itok=YBQjaq77);
-    background-position: center;
-    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
     color: aquamarine;
 }
+
 /* need to make css for my page */
 header {
     height: 70px;
@@ -28,10 +28,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-p {
-    font-size: 25px;
 }
 
 .container {
@@ -75,26 +71,6 @@ form {
     transition: all 0.5s ease-in-out;
 }
 
-.showMe {
-    background: rgba(92, 84, 84, 0.281);
-    align-content: flex-start;
-    align-items: flex-end;
-    position: absolute;
-    right: 200px;
-    top: 0px;
-    font-size: 14px;
-    display: flex;   
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-p3 {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-
 .recentSearches {
     /* background: white; */
     display: flex;
@@ -108,30 +84,31 @@ p3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 5px;
-    background: rgba(7, 116, 34, 0.212); 
-    border: 2px solid;
-}
-
-.recent-search{   
-    /* float: left; */
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
     width: 100%;
-    margin: 6px;
-    padding: 3px;
-    justify-content: space-between;
-    height: 200px;
-    border: 2px solid;
+    height: 100%;
+    margin: 5px;
+    background: transparent; 
+    /* border: 2px solid; */
 }
 
-/* five-day {
+.recent-searches{   
     display: flex;
+    color: rgba(7, 28, 134, 0.508);
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 18%;
+    height: 100%;
+    margin: 6px;
+    justify-content: space-between;
+    border: 4px solid;
+}
+
+p {
+    font-size: 25px;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-} */
+}
+
+
 
 ul {
 display: flex;
@@ -145,18 +122,3 @@ li {
     justify-content: space-around;
     
 }
-
-/* 
-#search2 {
-    background: transparent;
-    color: darkmagenta;
-    height: 50px;
-    width: 220px;
-    border-radius: 10px 5px;
-    border: 3px solid;
-    margin: 7px;
-}
-
-#search2:hover {
-    background: rgba(73, 208, 212, 0.295);
-} */

@@ -11,7 +11,7 @@ var Name = document.querySelector(".Name");
 var p1 = document.querySelector("#p1");
 var APIKey = "0ae8e28782574a4e1da5362bb95aa91d";
 var forecast = document.querySelector("#forecast");
-var api = "https://api.openweathermap.org/data/2.5/onecall?lat={39.613319}&lon={-105.016647}&appid={0ae8e28782574a4e1da5362bb95aa91d";
+// var api = "https://api.openweathermap.org/data/2.5/onecall?lat={39.613319}&lon={-105.016647}&appid={0ae8e28782574a4e1da5362bb95aa91d";
 var recentSearches = document.querySelector(".card-container");
 let clearCard = document.getElementsByClassName("card-container")
 
